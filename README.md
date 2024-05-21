@@ -2,14 +2,15 @@
 
 ![QCC logo](qcc_logo.png)
 
-=>Pranav M.  
-=>Aaron R.
+=> Pranav M.  
+=> Aaron R.  
+=> Jay S.
 
 ---
 
 # QCC '24 Project
 
-Hii Aaron!!! 👋
+Hi Aaron & Jay!!! 👋
 
 ## Objectives:
 
