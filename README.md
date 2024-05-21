@@ -23,6 +23,6 @@ Hii Aaron!!! 👋
 
 ### Part 2:
 
-- Generate a webpage to fingerprint browsers and IP
+- Generate a webpage to fingerprint browsers and IP -> Thumbmark js (still need something for geolocation)
 - Aesthetically* display info
 - Link to sign up
