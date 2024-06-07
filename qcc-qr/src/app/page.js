@@ -10,7 +10,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col justify-between items-center  p-24">
       
       <Link href={`https://queencitycon.org`}>
-        <h2 className={`${jersey10.className} text-4xl font-bold text-center lg:col-span-'`}>
+        <h2 className={`${jersey10.className} text-4xl font-bold text-center lg:col-span-2`}>
           Queen City Con
         </h2>
         </Link>
