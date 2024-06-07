@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^14.2.3",
     "@thumbmarkjs/thumbmarkjs": "^0.14.8",
     "next": "14.2.3",
     "react": "^18",
