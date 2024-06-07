@@ -75,7 +75,7 @@ function getUserAgent(result) {
 }
 
 function Fingerprint() {
-  const [fingerprint, setFingerprint] = useState({});
+  const [fingerprint, setFingerprint] = useState<any>({});
   useEffect(() => {
     getFingerprintData()
       .then((result) => {
