@@ -96,15 +96,15 @@ function Fingerprint() {
   }, []);
 
   return (
-    <>
+    <div className=" flex space-x-2 flex-col space-y-3">
       <span>Timezone: {fingerprint.TZ}</span>
       <span>Plugins: {fingerprint.Plugins}</span>
       <span>Apple Pay Version: {fingerprint.ApplePayVersion}</span>
       <span>Browser Info: {fingerprint.BrowserInfo}</span>
-      <span>Cookie Enabled: {fingerprint.CookieEnabled}</span>
+      <span>Cookies Enabled: {String(fingerprint.CookieEnabled)}</span>
       <span>Platform: {fingerprint.Platform}</span>
       <span>User Agent: {fingerprint.UserAgent}</span>
-    </>
+    </div>
   );
 }
 

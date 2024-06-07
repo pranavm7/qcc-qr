@@ -12,7 +12,8 @@
     "@thumbmarkjs/thumbmarkjs": "^0.14.8",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@types/node": "20.12.12",
