@@ -10,6 +10,7 @@
   "dependencies": {
     "@next/font": "^14.2.3",
     "@thumbmarkjs/thumbmarkjs": "^0.14.8",
+    "axios": "^1.7.2",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",

@@ -6,17 +6,6 @@ import { run } from "node:test";
 
 function getAllInfo(result) {
   let systemObject = result.system;
-  ////// logging all the info
-  // getTimezone(result);
-  // getPlugins(result);
-  // console.log("Apple Pay version:", getApplePayVersion(systemObject));
-  // console.log("Browser info:", getBrowserInfo(systemObject));
-  // console.log("Cookie enabled:", getCookieEnabled(systemObject));
-  // console.log("Platform:", getPlatform(systemObject));
-  // console.log("User agent:", getUserAgent(systemObject));
-  //////
-  // This object can/should be refactored into a type
-  //////
   let resultObj = {
     TZ: getTimezone(result),
     Plugins: getPlugins(result),
@@ -51,6 +40,8 @@ function getTimezone(result) {
 
 function getPlugins(result) {
   let pluginsArray = result.plugins.plugins;
+  pluginsArray = Array.from(new Set(pluginsArray.join("|").split("|")));
+  console.log("Plugins array:", pluginsArray);
   return pluginsArray;
 }
 
@@ -96,14 +87,32 @@ function Fingerprint() {
   }, []);
 
   return (
-    <div className=" flex space-x-2 flex-col space-y-3">
-      <span>Timezone: {fingerprint.TZ}</span>
-      <span>Plugins: {fingerprint.Plugins}</span>
-      <span>Apple Pay Version: {fingerprint.ApplePayVersion}</span>
-      <span>Browser Info: {fingerprint.BrowserInfo}</span>
-      <span>Cookies Enabled: {String(fingerprint.CookieEnabled)}</span>
-      <span>Platform: {fingerprint.Platform}</span>
-      <span>User Agent: {fingerprint.UserAgent}</span>
+    //<div className=" flex space-x-2 flex-col space-y-3">
+    <div>
+      <span className=" overflow-hidden text-wrap">
+        {/* <p>Timezone: {fingerprint.TZ}</p> */}
+        {fingerprint.ApplePayVersion > 0 ? (
+          <p>Apple Pay Version: {fingerprint.ApplePayVersion}</p>
+        ) : (
+          <></>
+        )}
+        <p>Browser Info: {fingerprint.BrowserInfo}</p>
+        <p>Cookies Enabled: {String(fingerprint.CookieEnabled)}</p>
+        <p>Platform: {fingerprint.Platform}</p>
+        {/* <p className=" text-wrap">User Agent: {fingerprint.UserAgent}</p> */}
+        {fingerprint.Plugins ? (
+          <div>
+            <div>Plugins:</div>
+            <div>
+              {fingerprint.Plugins.map((plugin, index) => {
+                return <div key={index}>{plugin}</div>;
+              })}
+            </div>
+          </div>
+        ) : (
+          <></>
+        )}
+      </span>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Fingerprint from "./fingerprint";
+import IPAddress from "./ipAddress";
 import { Press_Start_2P } from "@next/font/google";
 import Link from "next/link";
 
@@ -110,13 +111,19 @@ export default function Home() {
           </p>
         </a>*/}
         <div>
-          <h3 className={`${jersey10.className} text-2xl font-bold text-center  pb-2`}>
-            OOPS!
-          </h3>
-          <p className={`${jersey10.className} text-lg font-bold text-center  pb-5`}>
-            You've been caught!
+          <h3 className={`${jersey10.className} text-lg font-bold text-center  pb-2`}>
+            OOPS! Careful what you scan 😉          </h3>
+          <p className={`${jersey10.className}   text-center  p-5`}>
+            We're Queen City Con, a cybersecurity conference in Cincinnati, Ohio. Interested in learning more? Check out our website at <a href="https://queencitycon.org" className="text-blue-500">queencitycon.org</a> 
           </p>
-          <Fingerprint />
+          <div className="flex flex-col space-y-4 lg:flex-row  lg:space-x-4 justify-center  align-middle"> 
+            <div>
+              <IPAddress />
+            </div>
+            <div>
+              <Fingerprint />
+            </div>
+          </div>
         </div>
     </main>
   );
