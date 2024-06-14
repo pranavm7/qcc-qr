@@ -67,13 +67,17 @@ function IPAddress() {
 
   return (
     <div>
-      (ipData && ipData.status === "success"? (
-      <div className="text-lg">
-        <h2>Your IP Address:</h2>
-        <h4>{ip}</h4>
-      </div>
-      {/* <span className="">{JSON.stringify(ipData)}</span> */}
-      <span className="">{ipData}</span>) : <></>)
+      {ipData ? (
+        <>
+          <div className="text-lg">
+            <h2>Your IP Address:</h2>
+            <h4>{ip}</h4>
+          </div>
+          <span className="">{ipData}</span>
+        </>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }
