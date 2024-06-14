@@ -8,6 +8,7 @@ function IPAddress() {
   //creating IP state
   const [ip, setIP] = useState("");
   const [ipData, setIPData] = useState(<></>);
+  const [loading, setLoading] = useState(true);
 
   //   const getIP = async () => {
   //     const res = await axios.get("https://api.ipify.org/?format=json");
@@ -53,6 +54,7 @@ function IPAddress() {
     const res = await axios.get("http://ip-api.com/json?fields=17033019");
     console.log(res.data);
     if (res.data.status === "success") {
+      setLoading(false);
       setIP(res.data.query);
       setIPData(displayData(res.data));
     }
@@ -67,7 +69,7 @@ function IPAddress() {
 
   return (
     <div>
-      {ipData ? (
+      {!loading ? (
         <>
           <div className="text-lg">
             <h2>Your IP Address:</h2>
