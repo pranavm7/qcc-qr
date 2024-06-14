@@ -89,7 +89,7 @@ function Fingerprint() {
   return (
     //<div className=" flex space-x-2 flex-col space-y-3">
     <div>
-      <span className=" overflow-hidden text-wrap">
+      <span className=" overflow-hidden text-wrap space-y-3">
         {/* <p>Timezone: {fingerprint.TZ}</p> */}
         {fingerprint.ApplePayVersion > 0 ? (
           <p>Apple Pay Version: {fingerprint.ApplePayVersion}</p>
@@ -99,7 +99,7 @@ function Fingerprint() {
         <p>Browser Info: {fingerprint.BrowserInfo}</p>
         <p>Cookies Enabled: {String(fingerprint.CookieEnabled)}</p>
         <p>Platform: {fingerprint.Platform}</p>
-        {/* <p className=" text-wrap">User Agent: {fingerprint.UserAgent}</p> */}
+        <p className=" text-wrap">User Agent: {fingerprint.UserAgent}</p>
         {fingerprint.Plugins ? (
           <div>
             <div>Plugins:</div>

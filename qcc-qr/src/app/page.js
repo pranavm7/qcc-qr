@@ -117,10 +117,10 @@ export default function Home() {
             We're Queen City Con, a cybersecurity conference in Cincinnati, Ohio. Interested in learning more? Check out our website at <a href="https://queencitycon.org" className="text-blue-500">queencitycon.org</a> 
           </p>
           <div className="flex flex-col space-y-4 lg:flex-row  lg:space-x-4 justify-center  align-middle"> 
-            <div>
+            <div className={`${jersey10.className}  text-left text-sm p-5`}>
               <IPAddress />
             </div>
-            <div>
+            <div className={`${jersey10.className}  text-left text-sm p-5 `}>
               <Fingerprint />
             </div>
           </div>

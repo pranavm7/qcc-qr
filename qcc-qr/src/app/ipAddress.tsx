@@ -32,7 +32,7 @@ function IPAddress() {
     // zip: "<REDACTED>"
     return (
       <div>
-        <span>
+        <span className="space-y-5">
           Location Details:
           <p>
             {data.city}, {data.regionName}, {data.country}
@@ -68,14 +68,13 @@ function IPAddress() {
   }, []);
 
   return (
-    <div>
+    <div className="pt-5">
       {!loading ? (
         <>
-          <div className="text-lg">
-            <h2>Your IP Address:</h2>
-            <h4>{ip}</h4>
+          <div className="text-lg space-y-4">
+            <p>Your IP Address:{ip}</p>
           </div>
-          <span className="">{ipData}</span>
+          <span className="p-5">{ipData}</span>
         </>
       ) : (
         <></>
